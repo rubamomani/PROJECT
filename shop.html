@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+         .card {
+            margin-bottom: 20px;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .add-to-cart {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        .add-to-cart:hover {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #007bff;
+        }
+        .price {
+    color: #008080; /* Teal color */
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .card-title {
+    color: #008080; /* Teal color */
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  h1 {
+    color: #000000; /* Teal color */
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;
+    margin-top: 20px;
+  }
+ 
+  
+
+  
+  .cart-item {
+    border-bottom: 1px solid #000000;
+    padding: 10px 0;
+    color: #000000;
+  }
+ 
+  #openCart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  #cartSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    overflow-y: auto;
+    display: none;
+  }
+  #closeCart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  h2 {
+    color: #000000; 
+  }
+  span {
+    color: #000000;
+  }
+  h3{
+    color: #000000; 
+  }
+  #discountMessage {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  #applyPromoCode {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  #applyPromoCode:hover {
+    background-color: #45a049; /* Darker green */
+  }
+  span {
+    color: #000000; /* Tomato color */
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .product-card {
+    margin: 20px;
+}
+    </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <button class="codepen-button"><a href="index.html.html"><span>Home</span></a></button>
+            <button class="codepen-button"><a href="AboutUs.html"><span>About Us</span></a></button>
+            <button class="codepen-button"><a href="shop.html"><span>Shop</span></a></button>
+            <button class="codepen-button"><a href="ContactUs.html"><span>Contact Us</span></a></button>
+            <button class="codepen-button"><a href="Reviews.html"><span>Reviews</span></a></button>
+            <button class="codepen-button"><a href="Sitemap.html"><span>Site map</span></a></button>
+            
+        </div>
+    </nav>
+    <button id="openCart">Open Cart</button>
+  </header>
+  <span id="date"></span>
+ 
+
+  <div class="container mt-5">
+    <h1>Shop</h1>
+    <div class="row">
+      <div id="cartSidebar">
+        <h2>Cart (<span id="cartCount">0</span>)</h2>
+        <button id="closeCart">&times;</button>
+        <div id="cartItems"></div>
+        <div id="promoCodeContainer">
+          <input type="text" id="promoCodeInput" placeholder="Enter promo code">
+          <button id="applyPromoCode">Apply</button>
+        </div>
+        <h3>Total: $<span id="totalPrice">0</span></h3>
+    <p id="discountMessage"></p>
+      </div>
+        <div class="col-lg-2 ">
+            <div class="card">
+                <img src="img/dress1.jpg" class="card-img-top" alt="Product">
+                <div class="card-body">
+                    <h5 class="card-title">dress</h5>
+                    <p class="card-text">Product description</p>
+                    <p class="price">$49.99</p>
+                    <button class="btn btn-primary add-to-cart" data-product="dress">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="card">
+                <img src="img/jeans.webp" class="card-img-top" alt="Product">
+                <div class="card-body">
+                    <h5 class="card-title">jeans</h5>
+                    <p class="card-text">Product description</p>
+                    <p class="price">$100</p>
+                    <button class="btn btn-primary add-to-cart" data-product="jeans">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-2">
+            <div class="card">
+                <img src="img/hoodie3.jpg" class="card-img-top" alt="Product">
+                <div class="card-body">
+                    <h5 class="card-title">hoodie</h5>
+                    <p class="card-text">Product description</p>
+                    <p class="price">$60.90</p>
+                    <button class="btn btn-primary add-to-cart" data-product="hoodie">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-2">
+            <div class="card">
+                <img src="img/dreess.webp" class="card-img-top" alt="Product">
+                <div class="card-body">
+                    <h5 class="card-title">dress 2</h5>
+                    <p class="card-text">Product description</p>
+                    <p class="price">$20</p>
+                    <button class="btn btn-primary add-to-cart" data-product="dress 2 ">Add to Cart</button>
+                </div>
+            </div>
+            </div>
+            
+            
+           
+        </div>
+        
+        
+    </div>
+
+   
+
+  <script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const product = button.getAttribute('data-product');
+            const cart = document.getElementById('cart');
+            const li = document.createElement('li');
+            li.textContent = product;
+            li.classList.add('list-group-item');
+            cart.appendChild(li);
+        });
+    });
+
+    // cart 
+    
+    const cartSidebar = document.getElementById('cartSidebar');
+  const openCartButton = document.getElementById('openCart');
+
+  openCartButton.addEventListener('click', () => {
+    cartSidebar.style.display = 'block';
+  });
+
+  
+const closeCartButton = document.getElementById('closeCart');
+
+closeCartButton.addEventListener('click', () => {
+    cartSidebar.style.display = 'none';
+});
+//counter
+  const cartCount = document.getElementById('cartCount');
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+    
+    const product = button.getAttribute('data-product');
+    const price = button.parentElement.querySelector('.price').textContent;
+
+   
+    const cartItem = document.createElement('div');
+    cartItem.textContent = `${product}: ${price}`;
+    cartItem.classList.add('cart-item');
+
+  
+    document.getElementById('cartItems').appendChild(cartItem);
+
+   
+    const totalPrice = document.getElementById('totalPrice');
+    totalPrice.textContent = (parseFloat(totalPrice.textContent) + parseFloat(price.replace('$', ''))).toFixed(2);
+
+    const cartCount = document.getElementById('cartCount');
+    cartCount.textContent = parseInt(cartCount.textContent) + 1;
+  });
+});
+
+
+const promoCodeInput = document.getElementById('promoCodeInput');
+const applyPromoCodeButton = document.getElementById('applyPromoCode');
+const discountMessage = document.getElementById('discountMessage'); 
+
+applyPromoCodeButton.addEventListener('click', () => {
+  const promoCode = promoCodeInput.value;
+  const totalPriceElement = document.getElementById('totalPrice');
+  let discountPercent;
+
+  if (promoCode === 'ruba') {
+    discountPercent = 10; 
+  } else if (promoCode === 'haya') {
+    discountPercent = 20; 
+  } else if (promoCode === 'amer') {
+    discountPercent = 30; 
+  }
+
+  if (discountPercent) {
+    const totalPrice = parseFloat(totalPriceElement.textContent);
+    const discountAmount = (totalPrice * discountPercent) / 100;
+    const newTotal = totalPrice - discountAmount;
+
+    totalPriceElement.textContent = newTotal.toFixed(2);
+    discountMessage.textContent = "You saved " + discountPercent + "%. Your new total is: " + newTotal.toFixed(2);
+  }
+});
+
+document.getElementById('date').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>

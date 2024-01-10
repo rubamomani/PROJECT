@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<style>
+    #contactForm {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+
+  #contactForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #contactForm input[type="text"],
+  #contactForm input[type="email"],
+  #contactForm input[type="number"],
+  #contactForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  #contactForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #contactForm input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  label {
+    color: #000000; /* Tomato color */
+    font-family: Arial, sans-serif;
+   
+  }
+  span {
+    color: #000000; /* Tomato color */
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .main-title-1 {
+    margin-left: 400px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-header">
+                <button class="codepen-button"><a href="index.html.html"><span>Home</span></a></button>
+                <button class="codepen-button"><a href="AboutUs.html"><span>About Us</span></a></button>
+                <button class="codepen-button"><a href="shop.html"><span>Shop</span></a></button>
+                <button class="codepen-button"><a href="ContactUs.html"><span>Contact Us</span></a></button>
+                <button class="codepen-button"><a href="Reviews.html"><span>Reviews</span></a></button>
+                <button class="codepen-button"><a href="Sitemap.html"><span>Site map</span></a></button>
+                
+            </div>
+        </nav>
+    
+    
+    </header>
+    <span id="date"></span>
+
+<div class="team" id="team">
+    <h2 class="main-title-1">Team Members</h2>
+
+    <div class="Cardd">
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title">Ruba Almomani</p>
+                    <p>MORE</p>
+                </div>
+                <div class="backSide">
+                    <div class="social-menu">
+                        <ul>
+
+                            <li>
+                                <a href="https://www.instagram.com/momani02/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/rubamomani">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="description" >
+                        <a href="rubasalmomani@gmail.com">rubasalmoman@gmail.com</a>
+                        <br></br>
+
+                        <a href="tel:+9627 9047 4585">Call us at 07 9047 4585</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title">Amer Alshafie</p>
+                    <p>MORE</p>
+                </div>
+                <div class="backSide">
+                    <div class="social-menu">
+                        <ul>
+
+                            <li>
+                                <a href="https://instagram.com/amer_shafei?igshid=NzZlODBkYWE4Ng==">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/amer123455">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="description" >
+                        <a href="ameralshafee@icloud.com">ameralshafee@icloud.com</a>
+                        <br></br>
+
+                        <a href="tel:+9627 9789 0721">Call us at 07 9789 0721</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="myCard">
+            <div class="innerCard">
+                <div class="frontSide">
+                    <p class="title">Haya Ruziyeh</p>
+                    <p>MORE</p>
+                </div>
+                <div class="backSide">
+                    <div class="social-menu">
+                        <ul>
+
+                            <li>
+                                <a href="https://instagram.com/haya_ruziyeh?igshid=NzZlODBkYWE4Ng==">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Haya-123">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="description" >
+                        <a href="hayaruziyeh@gmail.com">hayaruziyeh@gmail.com</a>
+                        <br></br>
+
+                        <a href="tel:+9627 8641 8641">Call us at 07 8641 8641</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <form id="contactForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <span id="usernameError" style="color:red;"></span><br>
+        
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <span id="emailError" style="color:red;"></span><br>
+        
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="1"><br>
+            <span id="ageError" style="color:red;"></span><br>
+        
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender">
+                <option value="">Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                
+            </select><br>
+            <span id="genderError" style="color:red;"></span><br>
+        
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<script>
+   document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var age = document.getElementById('age').value;
+    var gender = document.getElementById('gender').value;
+
+    if (!username) {
+        document.getElementById('usernameError').textContent = 'Please enter your username.';
+    } else {
+        document.getElementById('usernameError').textContent = '';
+    }
+
+    if (!email) {
+        document.getElementById('emailError').textContent = 'Please enter your email.';
+    } else {
+        document.getElementById('emailError').textContent = '';
+    }
+
+    if (!age) {
+        document.getElementById('ageError').textContent = 'Please enter your age.';
+    } else if (age < 18) {
+        document.getElementById('ageError').textContent = 'You must be at least 18 years old to apply.';
+    } else {
+        document.getElementById('ageError').textContent = '';
+    }
+
+    if (!gender || gender === "") {
+        document.getElementById('genderError').textContent = 'Please select your gender.';
+    } else {
+        document.getElementById('genderError').textContent = '';
+    }
+
+    if (username && email && age >= 18 && (gender && gender !== "")) {
+        alert('Thanks for Applying.');
+    }
+});
+
+document.getElementById('date').textContent = new Date().toLocaleString();
+</script>
+</body>
+</html>
